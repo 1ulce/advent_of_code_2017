@@ -21,7 +21,6 @@ sum = 0
 INPUT.split("\n").each do |row|
   nums = row.split(" ").map(&:to_i).sort
   nums.each_with_index do |num,idx|
-    compare = nil
     n = 0
     until idx == nums.count - 1 - n
       if nums[nums.count - 1 - n] % num == 0
