@@ -2,8 +2,6 @@ INPUT = 325489
 
 lines = [{rank: 1, pos: {x: 0, y: 0}, num: 1, direction: 1}]
 n = 1
-sum = 0
-is_finish = false
 while true
   last = lines.last
   direction = last[:direction]
@@ -36,8 +34,7 @@ while true
   end
   n += 1
   direction = (direction - 1) % 4 unless has_left
-  new_last = {rank: n, pos: pos, num: sum, direction: direction}
-  lines << new_last
+  lines << {rank: n, pos: pos, num: sum, direction: direction}
   break if sum > INPUT
 end
 p lines.last[:num]
