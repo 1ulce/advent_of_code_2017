@@ -1092,7 +1092,7 @@ hhmwlo (56)
 icgwppo (84)
 EOS
 
-def compare_list(towers)
+def get_diff_disc(towers)
   until towers.count == 1
     towers.each do |k, v|
       if v[1] != []
@@ -1159,5 +1159,5 @@ array.each do |row|
   end
 end
 clones = towers.clone
-result = compare_list(towers)
+result = get_diff_disc(towers)
 p clones[result[0]][0] - result[1]
